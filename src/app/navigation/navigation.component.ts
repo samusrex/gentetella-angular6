@@ -20,7 +20,7 @@ export class NavigationComponent implements OnInit {
   constructor() {}
   
   ngOnInit() {
-    // this.plot()
+    this.setContentHeight()
   }
   
   anchorClicked(event: MouseEvent) {
@@ -103,6 +103,15 @@ export class NavigationComponent implements OnInit {
   }
   
   setContentHeight() {
+    this.$BODY = $('body')
+    this.$MENU_TOGGLE = $('#menu_toggle')
+    this.$SIDEBAR_MENU = $('#sidebar-menu')
+    this.$SIDEBAR_FOOTER = $('.sidebar-footer')
+    this.$LEFT_COL = $('.left_col')
+    this.$RIGHT_COL = $('.right_col')
+    this.$NAV_MENU = $('.nav_menu')
+    this.$FOOTER = $('footer')
+    
     // reset height
     this.$RIGHT_COL.css('min-height', $(window).height());
     
